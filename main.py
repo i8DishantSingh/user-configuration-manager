@@ -1,12 +1,10 @@
-    # Create a dictionary named test_settings with some initial values
-    test_settings = {
+test_settings = {
     "theme": "light",
     "language": "english",
     "notifications": "enabled"
-    }
+}
 
-    # Function to add a new setting
-    def add_setting(settings, kv_pair):
+def add_setting(settings, kv_pair):
     key, value = kv_pair
     key = key.lower()
     value = value.lower()
@@ -16,8 +14,7 @@
         settings[key] = value
         return f"Setting '{key}' added with value '{value}' successfully!"
 
-    # Function to update an existing setting
-    def update_setting(settings, kv_pair):
+def update_setting(settings, kv_pair):
     key, value = kv_pair
     key = key.lower()
     value = value.lower()
@@ -27,8 +24,7 @@
     else:
         return f"Setting '{key}' does not exist! Cannot update a non-existing setting."
 
-    # Function to delete a setting
-    def delete_setting(settings, key):
+def delete_setting(settings, key):
     key = key.lower()
     if key in settings:
         del settings[key]
@@ -36,8 +32,7 @@
     else:
         return "Setting not found!"
 
-    # Function to view all settings
-    def view_settings(settings):
+def view_settings(settings):
     if not settings:
         return "No settings available."
     result = "Current User Settings:\n"
